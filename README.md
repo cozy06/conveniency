@@ -46,7 +46,7 @@ delay(<time>, {<action>})
 
 ### Release \<Tag>
 
-* com.github.cozy06:conveniency:1594953f16 <span style="color:green">23.3.38</span> **<span style="color:orange">[RECENT]</span>**
+* com.github.cozy06:conveniency:1594953f16 **_'23.3.38'_** **[RECENT]**
 
 ### NOTE
 
