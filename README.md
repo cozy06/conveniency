@@ -46,7 +46,8 @@ delay(<time>, {<action>})
 
 ### Release \<Tag>
 
-* com.github.cozy06:conveniency:1594953f16 **_'23.3.38'_** **[RECENT]**
+* "com.github.cozy06:conveniency:<Tag>"
+* <1594953f16> **_'23.3.38'_** **[RECENT]**
 
 ### NOTE
 
