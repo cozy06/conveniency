@@ -1,4 +1,4 @@
-package com.github.cozy06
+package io.github.cozy06
 
 import kotlin.concurrent.thread
 

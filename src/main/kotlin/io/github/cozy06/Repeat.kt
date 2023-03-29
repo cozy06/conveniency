@@ -1,7 +1,7 @@
-package com.github.cozy06
+package io.github.cozy06
 
 class Repeat {
-    fun repeat(action: (Int) -> Unit, times: Int, startValue: Int = 0, step: Int = 1) {
+    fun loop(action: (Int) -> Unit, times: Int, startValue: Int = 0, step: Int = 1) {
         if(step == 0) throw IllegalArgumentException("Step Can't Be ZERO")
         var index = startValue
         if(step < 0) {

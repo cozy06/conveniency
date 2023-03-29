@@ -11,12 +11,12 @@
     * GitHub를 통한 업데이트
 
 * #### EXAMPLE
-   * repeat
+    * repeat
    ```kotlin
    //it은 증가하는 값(for문의 변수(i) 역할), startVal의 기본 값 = 0, step의 기본 값 = 1
    repeat({<action(it)>}, <times>, <startVal>, <step>)
    ```
-   * delay
+    * delay
    ```kotlin
    delay(<time>, {<action>})
    ```
