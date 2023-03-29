@@ -10,6 +10,17 @@
     * Scheduler 기능 ~~-예정-~~
     * GitHub를 통한 업데이트
 
+* #### EXAMPLE
+   * repeat
+   ```kotlin
+   //it은 증가하는 값(for문의 변수(i) 역할), startVal의 기본 값 = 0, step의 기본 값 = 1
+   repeat({<action(it)>}, <times>, <startVal>, <step>)
+   ```
+   * delay
+   ```kotlin
+   delay(<time>, {<action>})
+   ```
+
 ---
 
 ### Gradle `conveniency`
@@ -25,21 +36,6 @@ repositories {
 dependencies {
     implementation("com.github.cozy06:conveniency:<Tag>")
 }
-```
-
----
-
-### EXAMPLE
-
-* repeat
-```kotlin
-//it은 증가하는 값(for문의 변수(i) 역할), startVal의 기본 값 = 0, step의 기본 값 = 1
-repeat({<action(it)>}, <times>, <startVal>, <step>)
-```
-
-* delay
-```kotlin
-delay(<time>, {<action>})
 ```
 
 ---
