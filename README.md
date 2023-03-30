@@ -31,6 +31,12 @@
    //schedule 제거
    shd.removeSchedule(<index>)
    
+   //schedule 삽입
+   shd.removeSchedule(<index>, <Schedule>)
+   
+   //schedule 수정
+   shd.removeSchedule(<index>, <Schedule>)
+   
    //schedule 실행
    runScheduler(shd)
    
@@ -60,12 +66,12 @@ dependencies {
 ### Release \<Tag>
 
 * "com.github.cozy06:conveniency:\<Tag>"
-* <1594953f16\> -**_'23.3.28'_**
-* <4ea8ba0b64\> -**_'23.3.30'_**
-* <52031edea6\> -**_'23.3.30'_**
-* <60e19a653b\> -**_'23.3.30'_**
-* <26a7bfedac\> -**_'23.3.30'_**
-* <078a194059\> -**_'23.3.30'_** **[RECENT]**
+* <1594953f16\> **_'23.3.28'_**
+* <4ea8ba0b64\> **_'23.3.30'_**
+* <60e19a653b\> **_'23.3.30'_**
+* <26a7bfedac\> **_'23.3.30'_**
+* <078a194059\> **_'23.3.30'_**
+* <2a101e62d2\> **_'23.3.30'_** **[RECENT]**
 
 ### NOTE
 
