@@ -26,7 +26,7 @@
    val shd: Scheduler = newScheduler { <action> }
    
    //schedule 추가
-   shd.addSchedule(Schedule(<time>) { <action> })
+   shd.addSchedule(Schedule(<time>, { <action> }))
    
    //schedule 제거
    shd.removeSchedule(<index>)
@@ -64,7 +64,7 @@ dependencies {
 * <4ea8ba0b64\> -**_'23.3.30'_**
 * <52031edea6\> -**_'23.3.30'_**
 * <60e19a653b\> -**_'23.3.30'_**
-* <05d47a413a\> -**_'23.3.30'_** **[RECENT]**
+* <273e141354\> -**_'23.3.30'_** **[RECENT]**
 
 ### NOTE
 
