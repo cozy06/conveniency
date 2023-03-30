@@ -23,7 +23,7 @@
     * Scheduler
    ```kotlin
    //schedule 생성
-   val shd: Scheduler = newScheduler({<action>})
+   val shd: Scheduler = newScheduler { <action> }
    
    //schedule 추가
    shd.addSchedule(Schedule(<time>, <action>))
