@@ -1,8 +1,5 @@
 package com.github.cozy06
 
-import com.github.cozy06.Async.Companion.addSchedule
-import com.github.cozy06.Async.Companion.removeSchedule
-import java.lang.Thread.interrupted
 import kotlin.concurrent.thread
 
 class Async {
