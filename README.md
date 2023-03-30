@@ -7,18 +7,32 @@
 * #### Features
     * for문 기반 반복문
     * Tread를 이용한 비동기 딜레이
-    * Scheduler 기능 ~~-예정-~~
+    * Scheduler 기능
     * GitHub를 통한 업데이트
 
 * #### EXAMPLE
-    * repeat
+    * loop
    ```kotlin
    //it은 증가하는 값(for문의 변수(i) 역할), startVal의 기본 값 = 0, step의 기본 값 = 1
-   repeat({<action(it)>}, <times>, <startVal>, <step>)
+   loop({<action(it)>}, <times>, <startVal>, <step>)
    ```
     * delay
    ```kotlin
    delay(<time>, {<action>})
+   ```
+    * Scheduler
+   ```kotlin
+   //schedule 생성
+   val shd: MutableList<Schedule> = newScheduler({<action>})
+   
+   //schedule 추가
+   shd.addSchedule(Schedule(<time>, <action>))
+   
+   //schedule 제거
+   shd.removeSchedule(<index>)
+   
+   //schedule 실행
+   runScheduler(shd)
    ```
 
 ---
