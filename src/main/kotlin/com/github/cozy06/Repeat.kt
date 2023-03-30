@@ -1,4 +1,4 @@
-package io.github.cozy06
+package com.github.cozy06
 
 class Repeat {
     fun loop(action: (Int) -> Unit, times: Int, startValue: Int = 0, step: Int = 1) {

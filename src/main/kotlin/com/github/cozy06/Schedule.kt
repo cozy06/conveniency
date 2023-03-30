@@ -1,4 +1,4 @@
-package io.github.cozy06
+package com.github.cozy06
 
 data class Schedule(
     val time: Long,
