@@ -26,7 +26,7 @@
    val shd: Scheduler = newScheduler { <action> }
    
    //schedule 추가
-   shd.addSchedule(Schedule(<time>, <action>))
+   shd.addSchedule(Schedule(<time>) { <action> })
    
    //schedule 제거
    shd.removeSchedule(<index>)
