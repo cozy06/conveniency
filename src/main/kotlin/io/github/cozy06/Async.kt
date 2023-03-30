@@ -23,7 +23,6 @@ class Async {
     }
 
     fun runScheduler(Schedule: Scheduler) {
-        println(Schedule)
         if(Schedule.isNotEmpty()) {
             thread(start = true) {
                 Thread.sleep(Schedule[0].time)
