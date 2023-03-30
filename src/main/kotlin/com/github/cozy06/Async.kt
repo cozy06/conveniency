@@ -1,5 +1,6 @@
 package com.github.cozy06
 
+import com.github.cozy06.Async.Companion.addSchedule
 import kotlin.concurrent.thread
 
 class Async {
@@ -33,8 +34,11 @@ class Async {
                 thread(start = true) {
                     Thread.sleep(Schedule[0].time)
                     Schedule[0].action()
-                    Schedule.removeAt(0)
-                    if(Schedule.isNotEmpty() && Schedule[0].action() != stop()) {
+                    if(Schedule[0].stop) {
+                        Schedule.removeAt(0)
+                    }
+                    else {
+                        Schedule.removeAt(0)
                         runScheduler(Schedule)
                     }
                 }
@@ -44,7 +48,8 @@ class Async {
         }
 
         fun stopScheduler(Schedule: Scheduler) {
-            Schedule.add(1, Schedule(0L) { stop() })
+            Schedule.add(0, Schedule(0L, { stop() }, true))
+            Schedule[0].action()
         }
 
         val stop: () -> Unit = {}
