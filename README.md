@@ -18,7 +18,7 @@
    ```
     * delay
    ```kotlin
-   delay(<time>, {<action>})
+   delay(<time>) { <action> }
    ```
     * Scheduler
    ```kotlin
