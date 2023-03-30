@@ -34,7 +34,7 @@ class Async {
                     Thread.sleep(Schedule[0].time)
                     Schedule[0].action()
                     if(Schedule[0].stop) {
-                        Schedule.removeAt(0)
+                        Schedule[0].stop = false
                     }
                     else {
                         Schedule.removeAt(0)
@@ -47,10 +47,7 @@ class Async {
         }
 
         fun stopScheduler(Schedule: Scheduler) {
-            Schedule.add(0, Schedule(0L, { stop() }, true))
-            Schedule[0].action()
+            Schedule[0].stop = true
         }
-
-        val stop: () -> Unit = {}
     }
 }
