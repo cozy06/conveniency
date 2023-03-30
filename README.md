@@ -57,8 +57,9 @@ dependencies {
 ### Release \<Tag>
 
 * "com.github.cozy06:conveniency:\<Tag>"
-* <1594953f16> -**_'23.3.28'_**
-* <4ea8ba0b64> -**_'23.3.30'_** **[RECENT]**
+* <1594953f16\> -**_'23.3.28'_**
+* <4ea8ba0b64\> -**_'23.3.30'_**
+* <c3c5e94af8\> -**_'23.3.30'_** **[RECENT]**
 
 ### NOTE
 
