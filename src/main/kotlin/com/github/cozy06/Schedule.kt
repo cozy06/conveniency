@@ -1,8 +1,8 @@
 package com.github.cozy06
 
 data class Schedule(
-    val time: Long,
-    val action: () -> Unit,
+    var time: Long,
+    var action: () -> Unit,
     var stop: Boolean = false
 )
 

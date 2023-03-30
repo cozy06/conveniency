@@ -15,11 +15,11 @@ class Async {
             return mutableListOf(Schedule(0L, action))
         }
 
-        fun MutableList<Schedule>.addSchedule(action: Schedule) {
-            this.addAll(listOf(action))
+        fun Scheduler.addSchedule(schedules: Schedule) {
+            this.addAll(listOf(schedules))
         }
 
-        fun MutableList<Schedule>.removeSchedule(index: Int) {
+        fun Scheduler.removeSchedule(index: Int) {
             if(this.size > index) {
                 this.removeAt(index)
             }
@@ -28,17 +28,25 @@ class Async {
             }
         }
 
-        fun runScheduler(Schedule: Scheduler) {
-            if (Schedule.isNotEmpty()) {
+        fun Scheduler.insertScheduler(index: Int, Schedules: Schedule) {
+            this.add(index, Schedules)
+        }
+
+        fun Scheduler.editSchedule(index: Int, Schedules: Schedule) {
+            this[index] = Schedules
+        }
+
+        fun runScheduler(schedules: Scheduler) {
+            if (schedules.isNotEmpty()) {
                 thread(start = true) {
-                    Thread.sleep(Schedule[0].time)
-                    Schedule[0].action()
-                    if(Schedule[0].stop) {
-                        Schedule[0].stop = false
+                    Thread.sleep(schedules[0].time)
+                    schedules[0].action()
+                    if(schedules[0].stop) {
+                        schedules[0].stop = false
                     }
                     else {
-                        Schedule.removeAt(0)
-                        runScheduler(Schedule)
+                        schedules.removeAt(0)
+                        runScheduler(schedules)
                     }
                 }
             } else {
@@ -46,8 +54,8 @@ class Async {
             }
         }
 
-        fun stopScheduler(Schedule: Scheduler) {
-            Schedule[0].stop = true
+        fun stopScheduler(Schedules: Scheduler) {
+            Schedules[0].stop = true
         }
     }
 }
