@@ -1,5 +1,6 @@
 package com.github.cozy06
 
+import java.lang.Thread.interrupted
 import kotlin.concurrent.thread
 
 class Async {
@@ -29,11 +30,19 @@ class Async {
                     Thread.sleep(Schedule[0].time)
                     Schedule[0].action()
                     Schedule.removeAt(0)
-                    runScheduler(Schedule)
+                    if(Schedule[0].action() != stop()) {
+                        runScheduler(Schedule)
+                    }
                 }
             } else {
                 throw IllegalArgumentException("Schedule is Now Empty")
             }
         }
+
+        fun stopScheduler(Schedule: Scheduler) {
+            Schedule.add(1, Schedule(0L) { stop() })
+        }
+
+        val stop: () -> Unit = {}
     }
 }
