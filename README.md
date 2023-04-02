@@ -49,10 +49,16 @@
    val text = <File>.readFile()
    
    //파일 작성
-   <File>.writeAll(<StringText>)
+   <File>.writeAll(<Text>)
    
    //파일 내용 추가
-   <File>.addLine(<StringText>)
+   <File>.addLine(<Text>)
+   ```
+
+  * Json
+   ```kotlin
+   //<Text>와 <Key>는 문자열
+   val Key = <Text>.toJson().getString(<Key>)
    ```
 
 ---
@@ -83,7 +89,8 @@ dependencies {
 * <26a7bfedac\> **_'23.3.30'_**
 * <078a194059\> **_'23.3.30'_**
 * <2a101e62d2\> **_'23.3.30'_**
-* <0c01bae0a6\> **_'23.4.2'_** **[RECENT]**
+* <0c01bae0a6\> **_'23.4.2'_**
+* <b1d6b88ea3\> **_'23.4.2'_** **[RECENT]**
 
 ### NOTE
 
