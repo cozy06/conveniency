@@ -1,8 +1,9 @@
 package com.github.cozy06
 
+import com.github.cozy06.File.Companion.toJson
+import org.json.JSONObject
+import java.io.*
 import java.io.File
-import java.io.FileWriter
-import java.io.InputStream
 
 class File {
     companion object {
@@ -37,6 +38,10 @@ class File {
             } finally {
                 writer.close()
             }
+        }
+
+        fun String.toJson(): JSONObject {
+            return JSONObject(this)
         }
     }
 }
