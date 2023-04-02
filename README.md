@@ -43,6 +43,17 @@
    //schedule 중단
    stopScheduler(shd)
    ```
+    * File
+   ```kotlin
+   //파일 읽기
+   val text = <File>.readFile()
+   
+   //파일 작성
+   <File>.writeAll(<StringText>)
+   
+   //파일 내용 추가
+   <File>.addLine(<StringText>)
+   ```
 
 ---
 
@@ -71,7 +82,8 @@ dependencies {
 * <60e19a653b\> **_'23.3.30'_**
 * <26a7bfedac\> **_'23.3.30'_**
 * <078a194059\> **_'23.3.30'_**
-* <2a101e62d2\> **_'23.3.30'_** **[RECENT]**
+* <2a101e62d2\> **_'23.3.30'_**
+* <0c01bae0a6\> **_'23.4.2'_** **[RECENT]**
 
 ### NOTE
 
