@@ -1,9 +1,10 @@
 package com.github.cozy06
 
-import com.github.cozy06.File.Companion.toJson
+import com.github.cozy06.Repeat.Companion.loop
 import org.json.JSONObject
-import java.io.*
 import java.io.File
+import java.io.FileWriter
+import java.io.InputStream
 
 class File {
     companion object {
@@ -21,6 +22,21 @@ class File {
             val writer = FileWriter(path)
             try {
                 writer.write(contents)
+            } catch (e:Exception) {
+                e.printStackTrace()
+            } finally {
+                writer.close()
+            }
+        }
+
+        fun File.insertLine(contents: String, index: Int) {
+            val newContentsList = this.readFile().split("\n").toMutableList()
+            newContentsList.add(index, contents)
+            var newContents: String = ""
+            loop({ newContents += newContentsList[it] }, newContentsList.size)
+            val writer = FileWriter(path)
+            try {
+                writer.write(newContents)
             } catch (e:Exception) {
                 e.printStackTrace()
             } finally {
