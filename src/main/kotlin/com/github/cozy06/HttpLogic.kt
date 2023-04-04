@@ -14,7 +14,7 @@ class HttpLogic {
             return params.toList()
         }
 
-        fun URL.httpPOST(param: Param? = null): String? {
+        fun URL.httpPOST(param: Param? = null, CodePrint: Boolean= false): String? {
             if(param == null) {
                 var response: String? = null
                 try {
@@ -46,15 +46,16 @@ class HttpLogic {
                 outputStream.flush()
                 outputStream.close()
                 val responseCode = connection.responseCode
-                println(responseCode)
+                if(CodePrint) { println(responseCode) }
                 val response = connection.inputStream.bufferedReader().readText()
                 connection.disconnect()
                 return response
             }
         }
 
-        fun URL.httpGET(param: Param? = null) {
+        fun URL.httpGET(param: Param? = null, CodePrint: Boolean = false): String? {
             var url: URL = this
+            var response: StringBuilder? = null
             if(param != null) {
                 var urlString: String = "?"
                 loop({ urlString = urlString + param[it].first + "=" + param[it].second + "&" }, param.size)
@@ -66,21 +67,21 @@ class HttpLogic {
             connection.requestMethod = "GET"
 
             val responseCode = connection.responseCode
+            if(CodePrint) { println(responseCode) }
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 val inputStream = connection.inputStream
                 val reader = BufferedReader(InputStreamReader(inputStream))
-                val response = StringBuilder()
+                response = StringBuilder()
 
                 var line: String?
                 while (reader.readLine().also { line = it } != null) {
                     response.append(line)
                 }
                 reader.close()
-
-                println(response.toString())
             } else {
                 println("GET request failed: HTTP error code $responseCode")
             }
+            return response.toString()
         }
     }
 }
