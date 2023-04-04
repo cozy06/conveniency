@@ -6,18 +6,22 @@
 
 * #### Features
     * for문 기반 반복문
-    * Tread를 이용한 비동기 딜레이
+    * Tread를 이용한 비동기 딜레이 및 작업
     * Scheduler 기능
+    * 파일 읽기와 쓰기
+    * json으로 변환
+    * Http 통신 보내기 (POST / GET)
     * GitHub를 통한 업데이트
 
 * #### EXAMPLE
-    * loop
+    * Loop
    ```kotlin
    //it은 증가하는 값(for문의 변수(i) 역할), startVal의 기본 값 = 0, step의 기본 값 = 1
    loop({<action(it)>}, <times>, <startVal>, <step>)
    ```
-    * delay
+    * Async
    ```kotlin
+   async { <action> }
    delay(<time>) { <action> }
    ```
     * Scheduler
@@ -59,10 +63,17 @@
    ```
 
   * Json
-   ```kotlin
-   //<Text>와 <Key>는 문자열
-   val Key = <Text>.toJson().getString(<Key>)
-   ```
+  ```kotlin
+  //<Text>는 문자열
+  val Key = <Text>.toJson()
+  ```
+  
+  * HTTPRequest
+  ```kotlin
+  //<URL>, <KEY>, <VALUE>들은 모두 문자열이고 <PrintResponseCode>의 기본값 false
+  URL(<URL>).httpPOST(params(<KEY1> to <VALUE1>, <KEY2> to <VALUE2>, ...), <PrintResponseCode>)
+  URL(<URL>).httpGET(params(<KEY1> to <VALUE1>, <KEY2> to <VALUE2>, ...), <PrintResponseCode>)
+  ```
 
 ---
 
@@ -87,14 +98,9 @@ dependencies {
 
 * "com.github.cozy06:conveniency:\<Tag>"
 * <1594953f16\> **_'23.3.28'_**
-* <4ea8ba0b64\> **_'23.3.30'_**
-* <60e19a653b\> **_'23.3.30'_**
-* <26a7bfedac\> **_'23.3.30'_**
-* <078a194059\> **_'23.3.30'_**
 * <2a101e62d2\> **_'23.3.30'_**
-* <0c01bae0a6\> **_'23.4.2'_**
-* <b1d6b88ea3\> **_'23.4.2'_**
-* <1d0386992a\> **_'23.4.2'_** **[RECENT]**
+* <1d0386992a\> **_'23.4.2'_**
+* <b2f8b9f1f4\> **_'23.4.4'_** **[RECENT]**
 
 ### NOTE
 
