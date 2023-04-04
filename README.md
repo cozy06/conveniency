@@ -22,6 +22,7 @@
     * Async
    ```kotlin
    async { <action> }
+   
    delay(<time>) { <action> }
    ```
     * Scheduler
@@ -72,6 +73,8 @@
   ```kotlin
   //<URL>, <KEY>, <VALUE>들은 모두 문자열이고 <PrintResponseCode>의 기본 값 = false
   URL(<URL>).httpPOST(params(<KEY1> to <VALUE1>, <KEY2> to <VALUE2>, ...), <PrintResponseCode>)
+  
+  //<URL>, <KEY>, <VALUE>들은 모두 문자열이고 <PrintResponseCode>의 기본 값 = false
   URL(<URL>).httpGET(params(<KEY1> to <VALUE1>, <KEY2> to <VALUE2>, ...), <PrintResponseCode>)
   ```
 
