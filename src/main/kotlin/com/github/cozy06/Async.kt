@@ -11,6 +11,12 @@ class Async {
             }
         }
 
+        fun async(function: () -> Unit) {
+            thread(start = true) {
+                function()
+            }
+        }
+
         fun newScheduler(action: () -> Unit): MutableList<Schedule> {
             return mutableListOf(Schedule(0L, action))
         }
