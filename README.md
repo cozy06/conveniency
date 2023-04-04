@@ -21,8 +21,10 @@
    ```
     * Async
    ```kotlin
+   //비동기 <action>
    async { <action> }
    
+   //비동기 딜레이 <action>
    delay(<time>) { <action> }
    ```
     * Scheduler
