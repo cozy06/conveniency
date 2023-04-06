@@ -11,6 +11,7 @@
     * 파일 읽기와 쓰기
     * json으로 변환
     * Http 통신 보내기 (POST / GET)
+    * Email 송신
     * GitHub를 통한 업데이트
 
 * #### EXAMPLE
@@ -79,6 +80,10 @@
   //<URL>, <KEY>, <VALUE>들은 모두 문자열이고 <PrintResponseCode>의 기본 값 = false
   URL(<URL>).httpGET(params(<KEY1> to <VALUE1>, <KEY2> to <VALUE2>, ...), <PrintResponseCode>)
   ```
+  * Email
+  ```kotlin
+  sendEmail(<receiver>, <subject>, <body>, <sender>, <appPassword>)
+  ```
 
 ---
 
@@ -105,7 +110,8 @@ dependencies {
 * <1594953f16\> **_'23.3.28'_**
 * <2a101e62d2\> **_'23.3.30'_**
 * <1d0386992a\> **_'23.4.2'_**
-* <b2f8b9f1f4\> **_'23.4.4'_** **[RECENT]**
+* <b2f8b9f1f4\> **_'23.4.4'_**
+* <ca5f7d5f46\> **_'23.4.6'_** **[RECENT]**
 
 ### NOTE
 
