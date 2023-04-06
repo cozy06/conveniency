@@ -17,5 +17,10 @@ class Logic {
                 }
             }
         }
+
+        fun input(prints: String = ""): String? {
+            print(prints)
+            return readLine()
+        }
     }
 }
