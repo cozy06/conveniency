@@ -15,10 +15,13 @@
     * GitHub를 통한 업데이트
 
 * #### EXAMPLE
-    * Loop
+    * Logic
    ```kotlin
    //it은 증가하는 값(for문의 변수(i) 역할), startVal의 기본 값 = 0, step의 기본 값 = 1
    loop({<action(it)>}, <times>, <startVal>, <step>)
+   
+   //input의 매개변수는 입력 전 출력할 문자, 기본값은 없음 
+   val a = input()
    ```
     * Async
    ```kotlin
@@ -111,7 +114,7 @@ dependencies {
 * <2a101e62d2\> **_'23.3.30'_**
 * <1d0386992a\> **_'23.4.2'_**
 * <b2f8b9f1f4\> **_'23.4.4'_**
-* <ca5f7d5f46\> **_'23.4.6'_** **[RECENT]**
+* <a9bbb5bbae\> **_'23.4.6'_** **[RECENT]**
 
 ### NOTE
 
