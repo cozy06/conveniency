@@ -15,6 +15,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation("org.json:json:20220924")
+    implementation("com.sun.mail:javax.mail:1.6.2")
 }
 
 publishing {
