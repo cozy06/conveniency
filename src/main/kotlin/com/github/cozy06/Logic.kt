@@ -1,6 +1,6 @@
 package com.github.cozy06
 
-class Repeat {
+class Logic {
     companion object {
         fun loop(action: (Int) -> Unit, times: Int, startValue: Int = 0, step: Int = 1) {
             if (step == 0) throw IllegalArgumentException("Step Can't Be ZERO")

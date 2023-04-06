@@ -1,6 +1,6 @@
 package com.github.cozy06
 
-import com.github.cozy06.Repeat.Companion.loop
+import com.github.cozy06.Logic.Companion.loop
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
