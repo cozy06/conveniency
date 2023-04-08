@@ -88,6 +88,11 @@
   sendEmail(<receiver>, <subject>, <body>, <sender>, <appPassword>)
   ```
 
+  * Encryption
+  ```kotlin
+  hashEncryption(<Text>, <type>)
+  ```
+
 ---
 
 ### Gradle `conveniency`
@@ -114,7 +119,8 @@ dependencies {
 * <2a101e62d2\> **_'23.3.30'_**
 * <1d0386992a\> **_'23.4.2'_**
 * <b2f8b9f1f4\> **_'23.4.4'_**
-* <a9bbb5bbae\> **_'23.4.6'_** **[RECENT]**
+* <a9bbb5bbae\> **_'23.4.6'_**
+* <b80d835185\> **_'23.4.8'_** **[RECENT]**
 
 ### NOTE
 
