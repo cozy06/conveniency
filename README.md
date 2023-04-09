@@ -21,7 +21,10 @@
    loop({<action(it)>}, <times>, <startVal>, <step>)
    
    //input의 매개변수는 입력 전 출력할 문자, 기본값은 없음 
-   val a = input()
+   val input = input()
+   
+   //inputPW의 매개변수는 입력 전 출력할 문자, 기본값은 없음 
+   val pw = inputPW()
    ```
     * Async
    ```kotlin
@@ -120,7 +123,8 @@ dependencies {
 * <1d0386992a\> **_'23.4.2'_**
 * <b2f8b9f1f4\> **_'23.4.4'_**
 * <a9bbb5bbae\> **_'23.4.6'_**
-* <b80d835185\> **_'23.4.8'_** **[RECENT]**
+* <b80d835185\> **_'23.4.8'_**
+* <25f71ecf55\> **_'23.4.9'_** **[RECENT]**
 
 ### NOTE
 
