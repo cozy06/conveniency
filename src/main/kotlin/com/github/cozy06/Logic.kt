@@ -22,5 +22,10 @@ class Logic {
             print(prints)
             return readLine()
         }
+
+        fun inputPW(prints: String = ""): String? {
+            print(prints)
+            return (System.console()?.readPassword() ?: readLine()).toString()
+        }
     }
 }
