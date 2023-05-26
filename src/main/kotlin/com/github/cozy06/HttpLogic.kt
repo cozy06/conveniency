@@ -14,7 +14,11 @@ class HttpLogic {
             return params.toList()
         }
 
-        fun URL.httpPOST(param: Param? = null, CodePrint: Boolean= false): String? {
+        fun header(vararg header: Pair<String, String>): Header {
+            return header.toList()
+        }
+
+        fun URL.httpPOST(param: Param? = null, headers: Header= header("Content-Type" to "application/json"), CodePrint: Boolean= false): String? {
             if(param == null) {
                 var response: String? = null
                 try {
@@ -40,7 +44,9 @@ class HttpLogic {
                 val connection = this.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
-                connection.setRequestProperty("Content-Type", "application/json")
+                loop({
+                    connection.setRequestProperty(headers[it].first, headers[it].second)
+                }, headers.size)
                 val outputStream: OutputStream = connection.outputStream
                 outputStream.write(json.toByteArray())
                 outputStream.flush()
@@ -87,3 +93,4 @@ class HttpLogic {
 }
 
 typealias Param = List<Pair<String, String>>
+typealias Header = List<Pair<String, String>>
