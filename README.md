@@ -83,8 +83,8 @@
   //<URL>, <KEY>, <VALUE>들은 모두 문자열이고 <PrintResponseCode>의 기본 값 = false
   URL(<URL>).httpPOST(params(<KEY1> to <VALUE1>, <KEY2> to <VALUE2>, ...), <PrintResponseCode>)
   
-  //<URL>, <KEY>, <VALUE>들은 모두 문자열이고 <PrintResponseCode>의 기본 값 = false
-  URL(<URL>).httpGET(params(<KEY1> to <VALUE1>, <KEY2> to <VALUE2>, ...), <PrintResponseCode>)
+  //<URL>, <KEY>, <VALUE>들은 모두 문자열이고 <header>의 기본 값 = header("Content-Type" to "application/json") 그리고 <PrintResponseCode>의 기본 값 = false
+  URL(<URL>).httpGET(params(<KEY1> to <VALUE1>, <KEY2> to <VALUE2>, ...), <header>, <PrintResponseCode>)
   ```
   * Email
   ```kotlin
@@ -124,7 +124,8 @@ dependencies {
 * <b2f8b9f1f4\> **_'23.4.4'_**
 * <a9bbb5bbae\> **_'23.4.6'_**
 * <b80d835185\> **_'23.4.8'_**
-* <25f71ecf55\> **_'23.4.9'_** **[RECENT]**
+* <25f71ecf55\> **_'23.4.9'_**
+* <34e2ea4118\> **_'23.5.27'_** **[RECENT]**
 
 ### NOTE
 
