@@ -18,6 +18,19 @@ class Logic {
             }
         }
 
+        fun range(startValue: Int, endValue: Int, step: Int = 1): MutableList<Int> {
+            if (step == 0) throw IllegalArgumentException("Step Can't Be ZERO")
+            if (step > 0 && startValue >= endValue) throw IllegalArgumentException("startValue Must be Smaller than endValue")
+            if (step < 0 && startValue <= endValue) throw IllegalArgumentException("startValue Must be Bigger than endValue")
+            val list: MutableList<Int> = mutableListOf()
+            var value = startValue
+            while ((step < 0 && value > endValue) || (step > 0 && value < endValue)) {
+                list.add(value)
+                value += step
+            }
+            return list
+        }
+
         fun input(prints: String = ""): String? {
             print(prints)
             return readLine()
