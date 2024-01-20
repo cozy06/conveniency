@@ -2,14 +2,14 @@ package com.github.cozy06
 
 class Logic {
     companion object {
-        fun loop(list: MutableList<Any>, action: (Any) -> Unit) {
+        fun loop(list: List<Any>, action: (Any) -> Unit) {
             repeat(list.size) {
                 val index = list[it]
                 action(index)
             }
         }
 
-        fun range(startValue: Int, endValue: Int, step: Int = 1): MutableList<Any> {
+        fun range(startValue: Int, endValue: Int, step: Int = 1): List<Any> {
             if (step == 0) throw IllegalArgumentException("Step Can't Be ZERO")
             if (step > 0 && startValue >= endValue) throw IllegalArgumentException("startValue Must be Smaller than endValue")
             if (step < 0 && startValue <= endValue) throw IllegalArgumentException("startValue Must be Bigger than endValue")
@@ -19,7 +19,7 @@ class Logic {
                 list.add(value)
                 value += step
             }
-            return list
+            return list.toList()
         }
 
         fun input(prints: String = ""): String? {
