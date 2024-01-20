@@ -9,11 +9,11 @@ class Logic {
             }
         }
 
-        fun range(startValue: Int, endValue: Int, step: Int = 1): MutableList<Int> {
+        fun range(startValue: Int, endValue: Int, step: Int = 1): MutableList<Any> {
             if (step == 0) throw IllegalArgumentException("Step Can't Be ZERO")
             if (step > 0 && startValue >= endValue) throw IllegalArgumentException("startValue Must be Smaller than endValue")
             if (step < 0 && startValue <= endValue) throw IllegalArgumentException("startValue Must be Bigger than endValue")
-            val list: MutableList<Int> = mutableListOf()
+            val list: MutableList<Any> = mutableListOf()
             var value = startValue
             while ((step < 0 && value > endValue) || (step > 0 && value < endValue)) {
                 list.add(value)
