@@ -8,6 +8,14 @@ import javax.mail.internet.MimeMessage
 
 class Email {
     companion object {
+        /**
+         * Email 전송
+         * @param to 수신 Email
+         * @param subject 제목
+         * @param body 본문 내용
+         * @param from 송신 Email, Google에서 발급 필요
+         * @param appPassword 송신 Email의 appPassword, Google에서 발급 필요
+         */
         fun sendEmail(to: String, subject: String, body: String, from: String, appPassword: String) {
             async {
                 val props = Properties().apply {
