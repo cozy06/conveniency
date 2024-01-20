@@ -1,14 +1,13 @@
 package com.github.cozy06
 
-import com.github.cozy06.File.Companion.readFile
 import java.nio.charset.StandardCharsets
 import java.security.MessageDigest
 
 class Encryption {
     companion object {
-        fun hashEncryption(input: String, type: String): String {
+        fun hashEncryption(input: String, encryptionType: String= "SHA-256"): String {
             val bytes = try {
-                MessageDigest.getInstance("SHA-256").digest(input.toByteArray(StandardCharsets.UTF_8))
+                MessageDigest.getInstance(encryptionType).digest(input.toByteArray(StandardCharsets.UTF_8))
             } catch (e: Exception) {
                 throw e
             }
