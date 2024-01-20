@@ -17,9 +17,12 @@
 * #### EXAMPLE
     * Logic
    ```kotlin
-   //it은 증가하는 값(for문의 변수(i) 역할), startVal의 기본 값 = 0, step의 기본 값 = 1
-   loop({<action(it)>}, <times>, <startVal>, <step>)
-   
+   //it은 List의 인덱스 별 값, range함수 이용
+   loop(<List<Any>>) {<action(it)>}
+  
+   //step의 기본값은 1, List 리턴
+   range(<startValue: Int>, <endValue: Int>, <step: Int>)
+   정
    //input의 매개변수는 입력 전 출력할 문자, 기본값은 없음 
    val input = input()
    
@@ -93,6 +96,7 @@
 
   * Encryption
   ```kotlin
+  // <type>의 기본값: SHA-256
   hashEncryption(<Text>, <type>)
   ```
 
