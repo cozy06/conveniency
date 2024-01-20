@@ -38,15 +38,15 @@ class HttpLogic {
             }
             else {
                 var json = ""
-                loop({ json = json + "{\"" + param[it].first + "\",\"" + param[it].second + "\"}," }, param.size)
+                repeat(param.size) { json = json + "{\"" + param[it].first + "\",\"" + param[it].second + "\"}," }
                 json = json.substring(0, json.length - 1)
 
                 val connection = this.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.doOutput = true
-                loop({
+                repeat(headers.size) {
                     connection.setRequestProperty(headers[it].first, headers[it].second)
-                }, headers.size)
+                }
                 val outputStream: OutputStream = connection.outputStream
                 outputStream.write(json.toByteArray())
                 outputStream.flush()
@@ -64,7 +64,7 @@ class HttpLogic {
             var response: StringBuilder? = null
             if(param != null) {
                 var urlString: String = "?"
-                loop({ urlString = urlString + param[it].first + "=" + param[it].second + "&" }, param.size)
+                repeat(param.size) { urlString = urlString + param[it].first + "=" + param[it].second + "&" }
                 urlString = urlString.substring(0, urlString.length - 1)
 
                 url = URL(url.toString() + urlString)

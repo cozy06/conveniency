@@ -34,7 +34,7 @@ class File {
             val newContentsList = this.readFile().split("\n").toMutableList()
             newContentsList.add(index, contents)
             var newContents: String = ""
-            loop({ newContents += newContentsList[it] + "\n" }, newContentsList.size)
+            repeat(newContentsList.size) { newContents += newContentsList[it] + "\n" }
             newContents = newContents.substring(0, newContents.length -2)
             val writer = FileWriter(path)
             try {
