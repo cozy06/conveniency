@@ -6,6 +6,7 @@ import java.io.File
 import java.io.FileWriter
 import java.io.InputStream
 
+
 class File {
     companion object {
         fun File.readFile(): String {
